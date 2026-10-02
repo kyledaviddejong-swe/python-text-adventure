@@ -49,16 +49,14 @@ Reaching the Exit ends the session and displays the result of your choices. Ther
 
 ## Verification
 
-Checked with Python 3.12.14 on October 1, 2026. Scripted playthroughs reached all four main endings, with additional checks for invalid commands, pickup confirmation, refusal and repeated pickup. The source is unchanged from the existing project.
+Checked with Python 3.12.14 on October 1, 2026. Scripted playthroughs reached all four main endings, with additional checks for invalid commands, pickup confirmation, refusal and repeated pickup. The game logic was preserved during preparation of this repository.
 
 ## Technical Focus
 
 Python · Dictionaries · Lists · Functions · Input Validation · Command Parsing · State Management · Branching Logic · File-Free Console Application
 
-## Source
+## Source and background
 
-The complete implementation is included in `ciaccos_submarket.py`. The program logic and gameplay implementation are unchanged from the original version; only the file header was simplified for portfolio presentation.
+The complete implementation is in `ciaccos_submarket.py`. I wrote the game implementation and narrative as introductory Python coursework. The game logic is preserved; the file header was simplified for presentation.
 
-## Background
-
-This project began as introductory Python coursework. I wrote the game implementation and its narrative. AI assistance was used for portfolio documentation and verification; this import preserves the existing game source without changes.
+See [credits and acknowledgments](CREDITS.md).
