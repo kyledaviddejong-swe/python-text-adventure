@@ -178,8 +178,8 @@ def update_status():
             print("\nAh, dear customer. Our most favored, respectable customer."
                   "\nYou have done all of at Ciacco's Submarket so proud. Not a single temptation left to languish on the shelves."
                   "\nDid you enjoy your time here? Did you rush so you could leave?")
-            print("\nIt amused us that you had to think twice about your purchases, an entire {} times!".format(num_refuse)) if num_refuse != 0 else "\nAnd not for a second did you doubt your need to feed! All instinct and passion, a beautiful beast!"
-            print("\nSo wonderfully spilling over with avarice, you even took something from where there was nothing") if took_nothing else "\nThough you could stand to try a little harder, reach lower depths. Think outside the box"
+            print("\nIt amused us that you had to think twice about your purchases, an entire {} times!".format(num_refuse) if num_refuse != 0 else "\nAnd not for a second did you doubt your need to feed! All instinct and passion, a beautiful beast!")
+            print("\nSo wonderfully spilling over with avarice, you even took something from where there was nothing" if took_nothing else "\nThough you could stand to try a little harder, reach lower depths. Think outside the box")
             print("\nRegardless, you are here, your cart is full. We are so happy for you. Go now, please. Exit to the east and we will bar the doors behind you. As it should be, as it was."
                   "\nWe will bow our heads in awe, beloved customer, our most hungry steward, until you return to the land of dust and pain."
                   "\nAt least, until sweet, eternal Hunger rouses again. See you tomorrow, beloved customer.")
@@ -188,8 +188,8 @@ def update_status():
                   "\nYou must be terribly confused. Starving, even. Your cart isn't quite full."
                   "\nWe put such effort into making our displays catch the eye, convince you of what you need."
                   "\nBut you missed a few stops, and that won't do.")
-            print("\nBut it was clearly in haste, you simply need to take your time, enjoy the spectacle more. Listen to your gut.") if num_refuse == 0 else "You're all frazzled up! Running around, hesitating. We understand. We care."
-            print("\nWe know you're meant to be here. One of us, really, part of the family. It isn't easy to stand in the entrance and embrace hunger for the love of it!") if took_nothing else "Though we may be in error, this submarket might not be for you just yet."
+            print("\nBut it was clearly in haste, you simply need to take your time, enjoy the spectacle more. Listen to your gut." if num_refuse == 0 else "You're all frazzled up! Running around, hesitating. We understand. We care.")
+            print("\nWe know you're meant to be here. One of us, really, part of the family. It isn't easy to stand in the entrance and embrace hunger for the love of it!" if took_nothing else "Though we may be in error, this submarket might not be for you just yet.")
             print("\nSuch as it is, we can't be having you leaving just yet. You've had a taste of Ciacco's Submarket, and I'm afraid we don't allow teetotalers to wander away.")
             print("\nAs the man puts a hand on your shoulder, and you see the light go out from his eyes, an old and terrible hunger grips your stomach."
                   "\nWhen he turns you around, you don't resist, and the long hallway back to the Butcher is open again. "
@@ -197,7 +197,7 @@ def update_status():
         elif len(inventory) == 0 and len(visited_rooms) == len(rooms):
             print("\nThe man's smile fades away like an old ache finally healed. "
                   "\nHe folds in on himself, muttering nonsense as his eyes drop from yours and settle on his shoes.")
-            print("\nYou faintly hear him make mention that coveting nothing is still coveting, maybe.") if took_nothing else "\nYou catch stray words of him amazed that even nothing could gets its hooks in you."
+            print("\nYou faintly hear him make mention that coveting nothing is still coveting, maybe." if took_nothing else "\nYou catch stray words of him amazed that even nothing could gets its hooks in you.")
             print("\nThe rusted doors swing open, and in lieu of a staircase back to the surface, there is a green field under a clear sky."
                   "\nYou've never seen this place before, but it's entirely familiar. "
                   "\nHunger shies away from you as you leave your empty cart behind. "

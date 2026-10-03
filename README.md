@@ -49,7 +49,15 @@ Reaching the Exit ends the session and displays the result of your choices. Ther
 
 ## Verification
 
-Checked with Python 3.12.14 on October 1, 2026. Scripted playthroughs reached all four main endings, with additional checks for invalid commands, pickup confirmation, refusal and repeated pickup. The game logic was preserved during preparation of this repository.
+Checked with Python 3.12.14 on October 1, 2026. Scripted playthroughs reached all four main endings, with additional checks for invalid commands, pickup confirmation, refusal and repeated pickup. Ending selection and player-choice rules are preserved. Five alternate narration lines that were previously evaluated without being printed now appear for their corresponding choices.
+
+To check ending output with Python’s standard library, run:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+The regression checks cover 11 scripted playthroughs across all four endings, including both variants of the restored narration.
 
 ## Technical Focus
 
@@ -57,6 +65,6 @@ Python · Dictionaries · Lists · Functions · Input Validation · Command Pars
 
 ## Source and background
 
-The complete implementation is in `ciaccos_submarket.py`. I wrote the game implementation and narrative as introductory Python coursework. The game logic is preserved; the file header was simplified for presentation.
+The complete implementation is in `ciaccos_submarket.py`. I wrote the game implementation and narrative as introductory Python coursework. The narrative text and ending conditions are preserved. This edition corrects the output of five existing alternate narration lines and simplifies the file header for presentation.
 
 See [credits and acknowledgments](CREDITS.md).
