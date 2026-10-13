@@ -45,7 +45,7 @@ get <Item Name>
 
 Commands are case-sensitive. Use lowercase `go` and `get`, and capitalize directions as shown. After requesting an item, enter `y` to take it or `n` to decline. For example, `go North`, then `get bread`, then `y` takes the bread from the Bakery.
 
-Reaching the Exit ends the session and displays the result of your choices. There is no save system or in-game quit command; use Ctrl+C to stop early.
+Reaching the Exit ends the session and displays the result of your choices. There is no save system or in-game quit command; use Ctrl+C to stop early. Interrupting the game or closing standard input exits cleanly.
 
 ## Verification
 

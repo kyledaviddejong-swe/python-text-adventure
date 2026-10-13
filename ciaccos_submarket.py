@@ -63,21 +63,21 @@ items = {
                  ],
     "Dairy":["Skim Milk",
              ["Skim Milk","milk", "skim"],
-             "The secrets of the pastoral nomads have been laid bare. Among their pilfered goods, a blue cap of white sustenance. Only 2% fat, therefore, it must be healthier than foul, whole milk. Though how the drink of life"+
+             "The secrets of the pastoral nomads have been laid bare. Among their pilfered goods, a blue cap of white sustenance. Only 2% fat, therefore, it must be healthier than foul, whole milk. Though how the drink of life "+
              "can be forced into separate parts, and insulating excess torn away, is yet another mystery of the Indo-Scythians.",
              "The gallon jug is going to be more watery and taste worse. But what you're pretty sure are health benefits are reassured by the soothing blue cap against the irritated reds.",
              True
              ],
     "Bathroom":["Spray Cleaner",
                 ["Spray Cleaner","cleaner", "spray"],
-                "It occurs to you, as you take in the wonderous sights, sounds, and smells of a submarket public bathroom, that the mostly full bottle of spray cleaner is unlikely to ever be used again."+
+                "It occurs to you, as you take in the wonderous sights, sounds, and smells of a submarket public bathroom, that the mostly full bottle of spray cleaner is unlikely to ever be used again. "+
                 "The label has also been melted to away from its own contents, a mark of high quality cleaning solution. The bottle deserves a home that cares for its chemical potency.",
                 "The sole clean patch of space in the bathroom was the area where the cleaner once sat in stasis. You have done a good deed today, though sterilizing your hands with some of the fluid may be wise.",
                 True
                 ],
     "Snacks":["Flavored Chips",
               ["Flavored Chips","chips", "bag", "chip bag"],
-              "The shining bag of a processed vegetable dusted in flavor powder is your favorite kind. Memories of childhood at gatherings or while watching TV call for you, a siren to its favorite ship too sturdy to dash upon rocks."+
+              "The shining bag of a processed vegetable dusted in flavor powder is your favorite kind. Memories of childhood at gatherings or while watching TV call for you, a siren to its favorite ship too sturdy to dash upon rocks. "+
               "The crinkle when you take it will be just as sweet as the first, the perfectly engineered bursts of flavor just as intense. You will never age or die.",
               "And so it was. Immortality puffed your head like a room fan turning, and it was all you ever hoped for. This calls for making your grandpa's dip recipe tonight!",
               True
@@ -231,7 +231,11 @@ while(True):
         break
 
     #Gather player input and test if it's valid
-    action_input = input("\nWhat would you like to do? ")
+    try:
+        action_input = input("\nWhat would you like to do? ")
+    except (EOFError, KeyboardInterrupt):
+        print("\nLeaving Ciacco\'s Submarket. Goodbye.")
+        break
     action = player_action(action_input, current_room)
     #If there is an action, i.e., a valid input check what action it is and execute
     if action:
@@ -246,7 +250,11 @@ while(True):
             #If it's still there, print the normal description and prompt the player to take it(y/n)
             if temp_item[-1]:
                 print("\n"+temp_item[2])
-                take = input("Take the {} (y/n)? ".format(temp_item[0])).strip().lower()
+                try:
+                    take = input("Take the {} (y/n)? ".format(temp_item[0])).strip().lower()
+                except (EOFError, KeyboardInterrupt):
+                    print("\nLeaving Ciacco\'s Submarket. Goodbye.")
+                    break
                 #If they take it, flip the flag and add the item to the inventory, except in the case of the "nothing" in the entrance
                 if take == "y":
                     #Print the "taken" dialogue
